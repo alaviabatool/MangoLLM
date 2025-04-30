@@ -1,0 +1,28 @@
+huggingface-cli login
+GIT_LFS_SKIP_SMUDGE=0 git clone https://huggingface.co/meta-llama/Llama-2-13b-chat-hf
+
+
+### For beginners
+
+# If your cloning interupts while accessing a local machine using SSH and if the nohup command does not work like my case, try the tmux terminal multiplexer
+tmux new -s llamaclone 
+
+# Run this in tmux terminal
+GIT_LFS_SKIP_SMUDGE=0 git clone https://huggingface.co/meta-llama/Llama-2-13b-chat-hf
+
+# Run this command to check the progress
+tmux attach -t llamaclone
+
+# If u want to check if you models have properly been cloned
+git lfs fsck 
+
+# To check sizes
+ls -lh
+
+# Use this to get the sha256sum of your cloned model
+ sha256sum model-00001-of-00003.safetensors  #compare with the sha256sum of this model on hugging face, they should be identical
+ 
+# Clone the Skingpt4 repository on GitHub
+git clone https://github.com/JoshuaChou2018/SkinGPT-4.git
+
+# Modify line 16 at SkinGPT-4-llama2/skingpt4/configs/models/skingpt4_llama2_13bchat.yaml to be the path of Llama-2-13b-chat-hf.
