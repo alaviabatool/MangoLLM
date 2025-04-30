@@ -1,0 +1,6 @@
+conda env create -f https://raw.githubusercontent.com/JoshuaChou2018/SkinGPT-4/refs/heads/main/environment.yml
+conda activate skingpt4_llama2
+conda install -c conda-forge mamba=1.4.7
+conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+conda install -c conda-forge git-lfs
+git lfs install
