@@ -1,0 +1,10 @@
+huggingface-cli login
+
+#using tmux terminal
+tmux new -s vicunaclone
+
+# Paste this in tmux terminal
+GIT_LFS_SKIP_SMUDGE=0 git clone https://huggingface.co/lmsys/vicuna-13b-delta-v0
+
+# Get llama-13b model
+git clone https://huggingface.co/huggyllama/llama-13b
